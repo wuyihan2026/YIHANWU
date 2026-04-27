@@ -20,12 +20,21 @@
                         Photography, Post-production: Eloise Cao<br>
                         Light: Carrot<br>
                         Make up & Hair: Zoey<br>
-                        Model: Nanyan Wang<br>
+                        Model: Nanyan Wang<br>
+
 
                     </div>
                 </div>
                 <div class="r-box">
-                    <p>Compensatory Nomadsis a fashion image and film series exploring cyclical patterns of self-management and self-indulgence within contemporary digital life.</p>                    <p>The project develops from observations of everyday behaviors in which control and desire coexist without resolution. Rather than being resolved, these contradictions are sustained through repetition — forming closed loops of action, adjustment, and compensation.</p>                    <p>This condition is translated into four “Compensatory Nomad” figures, each embodying a distinct behavioral state. Moving between productivity and indulgence, control and avoidance, they operate within systems that regulate and repeat their actions.</p>                    <p>The work unfolds through constructed environments rather than linear narrative. Walls, props, and spatial elements function as interfaces that trigger and contain behavior, while the body acts as both subject and image — registering cycles of control, consumption, and release.</p>                    <p>Across moving image and fashion imagery, the project constructs a continuous tension between regulation and loss of control, reflecting the normalized contradictions embedded in contemporary life.</p>
+                    <p>Compensatory Nomadsis a fashion image and film series exploring cyclical patterns of self-management and self-indulgence within contemporary digital life.</p>
+
+                    <p>The project develops from observations of everyday behaviors in which control and desire coexist without resolution. Rather than being resolved, these contradictions are sustained through repetition — forming closed loops of action, adjustment, and compensation.</p>
+
+                    <p>This condition is translated into four “Compensatory Nomad” figures, each embodying a distinct behavioral state. Moving between productivity and indulgence, control and avoidance, they operate within systems that regulate and repeat their actions.</p>
+
+                    <p>The work unfolds through constructed environments rather than linear narrative. Walls, props, and spatial elements function as interfaces that trigger and contain behavior, while the body acts as both subject and image — registering cycles of control, consumption, and release.</p>
+
+                    <p>Across moving image and fashion imagery, the project constructs a continuous tension between regulation and loss of control, reflecting the normalized contradictions embedded in contemporary life.</p>
                 </div>
             </div>
             
@@ -36,9 +45,58 @@
                 <video id="vio" onended="edned()" src="images/Comtenporary Nomad.mp4" >
                 </video>
             </div>
+        </div>
+        
+        
+        
+        
+        <div class="bottom-frame" style="padding-left: 4vw;">
+            <div class="img-box">
+                <span>#Character 1: Preparation vs Execution<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/Compensatory Nomad/01.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/02.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/03.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#Character 2: Self-Regulation vs Immersion<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/Compensatory Nomad/04.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/05.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/06.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#Character 3: Minimalism vs Consumption Traces<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/Compensatory Nomad/07.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/08.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/09.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#Character 4: Exertion vs Reward<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/Compensatory Nomad/10.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/11.jpg"/>
+                    <img class="click-img" src="images/Compensatory Nomad/12.jpg"/>
+                </div>
+            </div>
+            
             
             
         </div>
+        
+        
+        
+        
+        
+        
+        
         <div class="hi"></div>
         <div class="img-box-show CenterVH" style="display: none;">
             <div class="img-show-box CenterVH">
@@ -81,6 +139,19 @@
               isPlaying = false; // 重置状态，等待下一次检测
             }
           }
+        $('.close-btn').bind('touchend click', function(e) {
+            e.preventDefault();
+            $('.img-box-show').fadeOut(function(){
+                $('.img-show').attr('src','');
+            });
+        });
+        $('.click-img').bind('click', function(e) {
+            e.preventDefault();
+         //   alert()
+            $('.hi').html("<style>.img-img:before{content:'"+ $(this).parent().parent().find('span').html().replaceAll('<br>',' ') +"';}</style>");
+            $('.img-show').attr('src',$(this).attr('src').replace('images','images/normal'));
+            $('.img-box-show').fadeIn();
+        });
           
     </script>
 </html>
