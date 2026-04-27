@@ -1,0 +1,558 @@
+@font-face {
+    font-family: HT;
+    src: url("../Helvetica1.ttf");
+}
+*{
+    font-family: HT;
+}
+.CenterVH{
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.FillBG{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+	-moz-background-size:100% 100%;  
+	background-size:100% 100%; 
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.face-frame{
+    position: relative;
+/*    background-image: url(../images/Unoccupied/13.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%; */
+}
+.face-frame .face-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    z-index: 2;
+}
+.face-frame .face-title{
+    position: absolute;
+    height: 100%;
+    right:0;
+    top: 0;
+}
+.v.home .face-frame{
+    width: 100%;
+    height: calc(9 * 100vw / 16);
+}
+.h.home .face-frame{
+    height: 100%;
+    width: 100%;/* calc(16 * 100vh / 9); */
+}
+.face-frame .logo-a{
+    display: block;
+    width: 16vw;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
+}
+.face-frame .logo-a img{
+    width: 100%;
+    height: auto;
+}
+.face-frame .bottom{
+    width: 100%;
+    text-align: center;
+    padding: 2vh;
+    color: #000;
+    box-sizing: border-box;
+    position: absolute;
+    font-size: 1vw;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+.h.work .face-frame,
+.h.about .face-frame{
+    box-sizing: border-box;
+    width: calc( 100% - 6vw );
+    height: calc( 100% - 4vw );
+}
+.v.work .face-frame,
+.v.about .face-frame{
+    box-sizing: border-box;
+    width: calc( 100% - 6vw );
+    height: calc(9 * 100vw / 16 - 4vw);
+}
+.work .face-frame .l-box,
+.about .face-frame .l-box{
+    position: absolute;
+    left: 0;top: 0;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+.work .face-frame .r-box,
+.about .face-frame .r-box{
+    position: absolute;
+    right: 0;top: 0;
+    width: 72%;
+    height: 100%;
+}
+.work .face-frame .top,
+.about .face-frame .top{
+    position: relative;
+    width: 100%;
+    height: 2vw;
+    margin-bottom: 1vw;
+}
+
+.work .face-frame .middle,
+.about .face-frame .middle{
+    position: absolute;
+    left: 0;
+    top: 55%;
+    width: 100%;
+    font-size: 1.2vw;
+}
+.work .face-frame .logo-a,
+.about .face-frame .logo-a
+{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 8vw;
+    font-size: 1.2vw;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #000; /* 2px粗细，实线，黑色 */
+}
+
+.work .face-frame .logo-a img,
+.about .face-frame .logo-a img,
+.unoccupied .top-frame .logo-a img,
+.notyet .top-frame .logo-a img,
+.compensatorynomad .top-frame .logo-a img,
+.press .top-frame .logo-a img,
+.selfhealing .top-frame .logo-a img
+{
+    width: 10vw;
+}
+
+.work .face-frame .a{
+    position: absolute;
+    right: 1vw;
+    top: 0;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
+    font-size: 1.2vw;
+    color: #000;
+    float: right;
+}
+.about .face-frame .a{
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
+    font-size: 1.2vw;
+    color: #000;
+}
+.about .face-frame p{    
+    font-size: 1.2vw;
+    color: #000;
+    text-align: left;
+    margin-bottom: 2vw;
+}
+.work .main-box,
+.about .main-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+.work .main-box .row{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    padding-bottom: 2vw;
+    float: left;
+}
+.work .main-box .line-box{
+    width: 33.33%;
+    height: 100%;
+}
+.work .main-box .line-box img{
+    max-width: calc( 100% - 3vw );
+    max-height: calc( 100% - 5vw );
+}
+.work .face-frame .b{
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
+    font-size: 1.5vw;
+    margin-bottom: 2px;
+    color: #000;
+    font-style:italic;
+}
+
+
+
+.unoccupied,
+.notyet,
+.compensatorynomad,
+.press,
+.selfhealing
+{
+    position: relative;
+    padding: 4vw 6vw;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.unoccupied .top-frame .logo-a,
+.notyet .top-frame .logo-a,
+.compensatorynomad .top-frame .logo-a,
+.press .top-frame .logo-a,
+.selfhealing .top-frame .logo-a
+{
+    display: block;
+    left: 0;
+    width: 8vw;
+    font-size: 1.2vw;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #000; /* 2px粗细，实线，黑色 */
+}
+.unoccupied  .top-info,
+.notyet  .top-info,
+.compensatorynomad  .top-info,
+.press  .top-info,
+.selfhealing  .top-info
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.unoccupied .top-info .l-box,
+.notyet .top-info .l-box,
+.compensatorynomad .top-info .l-box,
+.press .top-info .l-box,
+.selfhealing .top-info .l-box
+{
+    position: relative;
+    float: left;
+    left: 0;top: 0;
+    width: 30%;
+    border-right: 1px solid #000;
+    font-style: italic;
+    line-height: 2vw;
+    font-size: 1.2vw;
+}
+.unoccupied .top-info .l-box span,
+.notyet .top-info .l-box span,
+.compensatorynomad .top-info .l-box span,
+.press .top-info .l-box span,
+.selfhealing .top-info .l-box span
+{
+    font-size: 1.5vw;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
+    margin-bottom: 2px;
+}
+.unoccupied .top-info .r-box,
+.notyet .top-info .r-box,
+.compensatorynomad .top-info .r-box,
+.press .top-info .r-box,
+.selfhealing .top-info .r-box
+{
+    position: relative;
+    float: right;
+    right: 0;top: 0;
+    width: 68%;
+    height: auto;
+    padding-left: 2vw;
+}
+.unoccupied .top-info .r-box p,
+.notyet .top-info .r-box p,
+.compensatorynomad .top-info .r-box p,
+.press .top-info .r-box p,
+.selfhealing .top-info .r-box p
+{
+    font-size: 1.2vw;
+    text-align: left;
+    margin: 0.5vw auto;
+}
+.unoccupied .bottom-frame,
+.notyet .bottom-frame,
+.press .bottom-frame,
+.selfhealing .bottom-frame
+{
+    margin-top: 4vw;
+    font-style: italic;
+    font-size: 1.0vw;
+    line-height: 1.3vw;
+    position: relative;
+    width: 100%;
+}
+.press .bottom-frame{
+    margin-top: 0.5vw;
+}
+.selfhealing .bottom-frame .l-box{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 10%;
+    padding-left: 2.6vw;
+}
+.selfhealing .bottom-frame .r-box{
+    position: relative;
+    width: 86%;
+    right: 0;
+    top: 0;
+}
+.selfhealing .c{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #000; /* 2px粗细，实线，黑色 */
+    font-size: 1.5vw;
+    margin-bottom: 2px;
+    color: #000;
+    font-style:italic;
+}
+.selfhealing .bottom-frame .r-box .click-img{
+    width: 23.6%;
+    margin: 0.5vw;
+    float: left;
+}
+
+
+.selfhealing .bottom-frame2 .click-img{
+    width: 33%;
+}
+.compensatorynomad .bottom-frame
+{
+    margin-top: 4vw;
+    font-style: italic;
+    font-size: 1.0vw;
+    line-height: 1.3vw;
+    position: relative;
+    width: 100%;
+    height: 10vw;
+    padding-left: 32%;
+    padding-right: 4vw;
+}
+.unoccupied .img-box{
+    width: 20%;
+    float: left;
+    padding: 1.3vw;
+    box-sizing: border-box;
+}
+.notyet .img-box{
+    width: 100%;
+    float: left;
+    padding: 1.3vw;
+    box-sizing: border-box;
+}
+
+.press .img-box{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+.notyet .img-box .img-box-line{
+    width: 100%;
+    margin-top: 1vw;
+}
+
+.press .img-box {
+    width: 72%;
+    margin-left: 14%;
+    height: 16vw;
+    box-sizing: border-box;
+    margin-top: 0.4vw;
+}
+.notyet .img-box .img-box-line img{
+    width: 31%;
+    height: 20vw;
+    object-fit: contain;
+    float: left;
+    margin: 0 2%;
+}
+
+.press .img-box  img{
+    width: 16vw;
+    height: 100%;
+    object-fit: contain;
+    float: left;
+    margin: 0 0.2vw;
+}
+.notyet .img-box .img-box-line img:first-child{
+    margin-left: 0px;
+}
+.notyet .img-box .img-box-line img:last-child{
+    margin-right: 0px;
+}
+.unoccupied .img-box img{
+    height: 12vw;
+    margin-top: 0.5vw;
+}
+.notyet .img-box img{
+    margin-top: 0.5vw;
+}
+.unoccupied .img-box-show,
+.notyet .img-box-show,
+.press .img-box-show,
+.selfhealing .img-box-show
+{
+    position: fixed;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    background-color: #000;
+}
+.unoccupied .img-box-show .img-show-box,
+.notyet .img-box-show .img-show-box,
+.press .img-box-show .img-show-box,
+.selfhealing .img-box-show .img-show-box
+{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+.unoccupied .img-box-show .img-img,
+.notyet .img-box-show .img-img
+{
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid #fff;
+    margin-top: 3vw;
+}
+.press .img-box-show .img-img,
+.selfhealing .img-box-show .img-img
+{
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid #fff;
+}
+.unoccupied .img-box-show .img-show,
+.notyet .img-box-show .img-show,
+.press .img-box-show .img-show,
+.selfhealing .img-box-show .img-show
+{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+.unoccupied .img-box-show .img-img:before,
+.notyet .img-box-show .img-img:before,
+.press .img-box-show .img-img:before,
+.selfhealing .img-box-show .img-img:before
+{
+    /* content: ''; */
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color: #fff;
+    text-align: left;
+    top: -3vw;
+    height: 3vw;
+    z-index: 99;
+    
+}
+.unoccupied .img-box-show .close-btn,
+.notyet .img-box-show .close-btn,
+.press .img-box-show .close-btn,
+.selfhealing .img-box-show .close-btn
+{
+    position: absolute;
+    width: 2.4vw;
+    height: 2.4vw;
+    border: 2px solid #fff;
+    z-index: 99;
+    right: 3vw;
+    top: 3vw;
+    border-radius: 50%;
+}
+.unoccupied .img-box-show .close-btn::after,
+.notyet .img-box-show .close-btn::after,
+.press .img-box-show .close-btn::after,
+.selfhealing .img-box-show .close-btn::after
+{
+    content: '';
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: calc( 50% - 1px );
+    height: 0;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+}
+.unoccupied .img-box-show .close-btn::before,
+.notyet .img-box-show .close-btn::before,
+.press .img-box-show .close-btn::before,
+.selfhealing .img-box-show .close-btn::before
+{
+    content: '';
+    height: 60%;
+    position: absolute;
+    left: calc( 50% - 1px );
+    top: 20%;
+    width: 0;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+.hi{
+    display: none;
+}
+.vio-box{
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    max-height: 100vh;
+}
+.vio-box .mask{
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+video{
+    width: 50vw;
+    height: 50vw;
+    max-height: 100vh;
+}
