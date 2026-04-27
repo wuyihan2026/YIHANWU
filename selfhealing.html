@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>YIHANWU-Self-healing</title>
+        <meta name="YIHANWU" content="YIHANWU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" media="screen" href="css/style.css">
+        <script src="js/jq.js"></script>
+    </head>
+    <body class="selfhealing">
+        <div class="top-frame">
+            <a href="index.html" class="logo-a"><img src="images/logo.png"/></a>
+            <div class="top-info">
+                <div class="l-box CenterVH">
+                    <div>
+                        <span class="c">Self-healing</span><br>
+                        /April, 2025<br><br>
+                        Fashion design & Art direction: Yihan Wu<br>
+                        Photography: Rino Qiu<br>
+                        Make up & Hair: Yujia Liu<br>
+                        Talent: Alban Shajaku<br>
+
+
+                    </div>
+                </div>
+                <div class="r-box">
+                    <p>Self-Healing explores the body as a site of transformation, shaped by both physical condition and lived experience. Developed from her personal experience with scoliosis, the project reflects on imbalance not as a flaw to be corrected, but as a structural and aesthetic potential.</p>
+
+                    <p>Asymmetry becomes the central language of the work. Displaced and rotated pattern pieces generate tilted constructions that appear unstable in their flat state, yet form dynamic, twisted silhouettes when worn — responding directly to the movement of the body.</p>
+
+                    <p>Informed by research into historical scoliosis treatments, particularly the principle of counter-directional pulling, the garments translate tension, rotation, and release into form. This approach is further developed through movement-based experiments, where elastic resistance and bodily extension inform softer, more adaptive structures.</p>
+
+                    <p>Moving away from rigid and corrective systems, Self-Healing proposes a more fluid and self-directed relationship with the body — where imbalance is not resolved, but continuously negotiated.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bottom-frame CenterVH" style="    -webkit-align-items: normal;    align-items: normal;">
+            <div class="l-box">
+                <span class="c">Lookbook</span>
+            </div>
+            <div class="r-box">
+                <img class="click-img" src="images/self-healing/Self-healing lookbook/01.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing lookbook/02.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing lookbook/03.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing lookbook/04.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing lookbook/05.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing lookbook/06.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing lookbook/07.jpg"/>
+            </div>
+        </div>
+        
+        <div class="bottom-frame bottom-frame2" style="margin-top: 20%;margin-bottom: 20%;">
+            <div class="l-box" style="width: 100%;margin-bottom: 2vw;">
+                <span class="c">Editorial</span>
+            </div>
+            <div class="img-box" style="padding-left: 2.6vw;">
+                <img class="click-img" src="images/self-healing/Self-healing editorial/01.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing editorial/02.jpg"/>
+                <img class="click-img" src="images/self-healing/Self-healing editorial/03.jpg"/>
+            </div>
+        </div>
+        
+        
+        <div class="hi"></div>
+        <div class="img-box-show CenterVH" style="display:none;">
+            <div class="img-show-box CenterVH">
+                <div class="img-img"><img class="img-show" src=""/></div>
+            </div>
+            
+            <div class="close-btn"></div>
+        </div>
+    </body>
+    <script>
+        let fx = 0;
+        let fy = 0;
+        let cclick = true;
+        $('.a-img').bind('touchend click', function(e) {
+            e.preventDefault();
+            window.location = $(this).attr('href');
+        });
+        $('.close-btn').bind('touchend click', function(e) {
+            e.preventDefault();
+            $('.img-box-show').fadeOut(function(){
+                $('.img-show').attr('src','');
+            });
+        });
+        $('.click-img').bind('click', function(e) {
+            e.preventDefault();
+            $('.img-show').attr('src',$(this).attr('src').replace('images','images/normal'));
+            $('.img-box-show').fadeIn();
+        });
+       
+    </script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>YIHANWU-Compensatory Nomad</title>
+        <meta name="YIHANWU" content="YIHANWU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" media="screen" href="css/style.css">
+        <script src="js/jq.js"></script>
+    </head>
+    <body class="compensatorynomad">
+        <div class="top-frame">
+            <a href="index.html" class="logo-a"><img src="images/logo.png"/></a>
+            <div class="top-info">
+                <div class="l-box CenterVH">
+                    <div>
+                        <span>Compensatory Nomad</span><br>
+                        /December, 2025<br><br>
+                        Creative Direction, Styling: Yihan Wu<br>
+                        Photography, Post-production: Eloise Cao<br>
+                        Light: Carrot<br>
+                        Make up & Hair: Zoey<br>
+                        Model: Nanyan Wang<br>
+
+                    </div>
+                </div>
+                <div class="r-box">
+                    <p>Compensatory Nomadsis a fashion image and film series exploring cyclical patterns of self-management and self-indulgence within contemporary digital life.</p>                    <p>The project develops from observations of everyday behaviors in which control and desire coexist without resolution. Rather than being resolved, these contradictions are sustained through repetition — forming closed loops of action, adjustment, and compensation.</p>                    <p>This condition is translated into four “Compensatory Nomad” figures, each embodying a distinct behavioral state. Moving between productivity and indulgence, control and avoidance, they operate within systems that regulate and repeat their actions.</p>                    <p>The work unfolds through constructed environments rather than linear narrative. Walls, props, and spatial elements function as interfaces that trigger and contain behavior, while the body acts as both subject and image — registering cycles of control, consumption, and release.</p>                    <p>Across moving image and fashion imagery, the project constructs a continuous tension between regulation and loss of control, reflecting the normalized contradictions embedded in contemporary life.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bottom-frame">
+            <div class="vio-box">
+                <img class="mask" src="images/videocover.png"/>
+                <video id="vio" onended="edned()" src="images/Comtenporary Nomad.mp4" >
+                </video>
+            </div>
+            
+            
+        </div>
+        <div class="hi"></div>
+        <div class="img-box-show CenterVH" style="display: none;">
+            <div class="img-show-box CenterVH">
+                <div class="img-img"><img class="img-show" src=""/></div>
+            </div>
+            
+            <div class="close-btn"></div>
+        </div>
+    </body>
+    <script>
+        let vio = document.getElementById('vio');
+        let fx = 0;
+        let fy = 0;
+        let isPlaying = false;
+        function edned(){
+            isPlaying = false; $('.mask').show();
+            vio.controls = false; // 隐藏
+        }
+        $('.vio-box').bind('click', function(e) {
+             e.preventDefault();
+             checkPlaying();
+             $('.mask').hide();
+             vio.controls = true; // 隐藏
+             if(isPlaying)
+             {
+                 vio.pause();
+             }
+             else
+             {
+                 vio.play();
+             }
+         });
+        function checkPlaying() {
+            if (vio.currentTime > 0 && !vio.paused && !vio.ended && vio.readyState > 2) {
+              if (!isPlaying) { // 确保只记录一次状态变化
+                console.log('视频正在播放');
+                isPlaying = true;
+              }
+            } else {
+              isPlaying = false; // 重置状态，等待下一次检测
+            }
+          }
+          
+    </script>
+</html>

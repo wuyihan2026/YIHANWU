@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>YIHANWU-Not Yet</title>
+        <meta name="YIHANWU" content="YIHANWU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" media="screen" href="css/style.css">
+        <script src="js/jq.js"></script>
+    </head>
+    <body class="notyet">
+        <div class="top-frame">
+            <a href="index.html" class="logo-a"><img src="images/logo.png"/></a>
+            <div class="top-info">
+                <div class="l-box CenterVH">
+                    <div>
+                        <span>'Not Yet'</span><br>
+                        /March, 2026<br><br>
+                        Creative Direction, Styling: Yihan Wu<br>
+                        Photography: Eloise Cao<br>
+                        Make up & Hair: Zhaojun Han<br>
+                        Talent: Xiwei Chen
+
+                    </div>
+                </div>
+                <div class="r-box">
+                    <p>Not Yetexplores the moment before an event occurs, focusing on conditions where risk is anticipated but never realized.</p>                    <p>Set within seemingly stable environments, the images reveal subtle misalignments between body, object, and space — small spatial tensions that introduce the possibility of danger without leading to it. These conditions remain suspended, inviting projection rather than resolution.</p>                    <p>Through staged scenes of everyday actions — eating, cleaning, grooming, ironing — the work constructs situations in which something appears about to happen. The character remains unaware, while the viewer gradually perceives these latent risks through composition and object placement.</p>                    <p>Using fashion imagery as a visual framework, clothing, posture, and styling organise the relationship between body and environment. Within this controlled system, tension is deliberately maintained, holding each image in a state of anticipation — not yet.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bottom-frame">
+            <div class="img-box">
+                <span>#01-Overflow<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/NOT YET/1-01.jpg"/>
+                    <img class="click-img" src="images/NOT YET/1-02.jpg"/>
+                    <img class="click-img" src="images/NOT YET/1-03.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#02-Fabric Contact<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/NOT YET/2-01.jpg"/>
+                    <img class="click-img" src="images/NOT YET/2-02.jpg"/>
+                    <img class="click-img" src="images/NOT YET/2-03.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#03–Foreign Element<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/NOT YET/3-01.jpg"/>
+                    <img class="click-img" src="images/NOT YET/3-02.jpg"/>
+                    <img class="click-img" src="images/NOT YET/3-03.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#04–Spatial Collision<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/NOT YET/4-01.jpg"/>
+                    <img class="click-img" src="images/NOT YET/4-02.jpg"/>
+                    <img class="click-img" src="images/NOT YET/4-03.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#05–Visual Interference<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/NOT YET/5-01.jpg"/>
+                    <img class="click-img" src="images/NOT YET/5-02.jpg"/>
+                    <img class="click-img" src="images/NOT YET/5-03.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img-box">
+                <span>#06–Falling Heat<br></span>
+                <div class="img-box-line CenterVH">
+                    <img class="click-img" src="images/NOT YET/6-01.jpg"/>
+                    <img class="click-img" src="images/NOT YET/6-02.jpg"/>
+                    <img class="click-img" style="opacity: 0;pointer-events: none;" src="images/NOT YET/6-03.jpg"/>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="hi"></div>
+        <div class="img-box-show CenterVH" style="display: none;">
+            <div class="img-show-box CenterVH">
+                <div class="img-img"><img class="img-show" src=""/></div>
+            </div>
+            
+            <div class="close-btn"></div>
+        </div>
+    </body>
+    <script>
+        let fx = 0;
+        let fy = 0;
+        let cclick = true;
+        $('.a-img').bind('touchend click', function(e) {
+            e.preventDefault();
+            window.location = $(this).attr('href');
+        });
+        $('.close-btn').bind('touchend click', function(e) {
+            e.preventDefault();
+            $('.img-box-show').fadeOut(function(){
+                $('.img-show').attr('src','');
+            });
+        });
+        $('.click-img').bind('click', function(e) {
+            e.preventDefault();
+         //   alert()
+            $('.hi').html("<style>.img-img:before{content:'"+ $(this).parent().parent().find('span').html().replaceAll('<br>',' ') +"';}</style>");
+            $('.img-show').attr('src',$(this).attr('src').replace('images','images/normal'));
+            $('.img-box-show').fadeIn();
+        });
+       
+    </script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>YIHANWU-PRESS</title>
+        <meta name="YIHANWU" content="YIHANWU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" media="screen" href="css/style.css">
+        <script src="js/jq.js"></script>
+    </head>
+    <body class="press">
+        <div class="top-frame">
+            <a href="index.html" class="logo-a"><img src="images/logo.png"/></a>
+            <div class="top-info">
+                <div class="l-box CenterVH">
+                    <div>
+                        <span>'PRESS'</span><br>
+                        /May, 2025<br><br>
+                        <span style="font-size: 1vw;border-bottom: 0px solid #000;font-weight: 100;">Garment, Image: Yihan Wu</span>
+
+
+                    </div>
+                </div>
+                <div class="r-box">
+                    <p>Derived fromSelf-Healing,Pressextends the investigation of body and structure through image. The series consists of scanned garment details produced using a professional print scanner.</p>                    <p>The images isolate textures, seams, and structural fragments, shifting focus from silhouette to material presence. In several images, garments are scanned through transparent protective covers, introducing an additional layer between surface and image. This mediating layer compresses and distorts the material, producing subtle tensions between clarity and obstruction.</p>                    <p>Approaching scanning as a process of pressure and examination, the work flattens and recontextualizes the garments, revealing underlying structures and variations, where rotation, deformation, and repetition become perceptible across the series.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bottom-frame">
+            <div class="img-box CenterVH">
+                    <img class="click-img" src="images/PRESS/01.jpg"/>
+                    <img class="click-img" src="images/PRESS/02.jpg"/>
+                    <img class="click-img" src="images/PRESS/03.jpg"/>
+                    <img class="click-img" src="images/PRESS/04.jpg"/>
+                    <img class="click-img" src="images/PRESS/05.jpg"/>
+            </div>
+            
+            <div class="img-box CenterVH">
+                    <img class="click-img" src="images/PRESS/06.jpg"/>
+                    <img class="click-img" src="images/PRESS/07.jpg"/>
+                    <img class="click-img" src="images/PRESS/08.jpg"/>
+                    <img class="click-img" src="images/PRESS/09.jpg"/>
+                    <img class="click-img" src="images/PRESS/10.jpg"/>
+            </div>
+            
+            <div class="img-box CenterVH" style="height: 2vw;">
+            </div>
+        </div>
+        <div class="hi"></div>
+        <div class="img-box-show CenterVH" style="display:none;">
+            <div class="img-show-box CenterVH">
+                <div class="img-img"><img class="img-show" src=""/></div>
+            </div>
+            
+            <div class="close-btn"></div>
+        </div>
+    </body>
+    <script>
+        let fx = 0;
+        let fy = 0;
+        let cclick = true;
+        $('.a-img').bind('touchend click', function(e) {
+            e.preventDefault();
+            window.location = $(this).attr('href');
+        });
+        $('.close-btn').bind('touchend click', function(e) {
+            e.preventDefault();
+            $('.img-box-show').fadeOut(function(){
+                $('.img-show').attr('src','');
+            });
+        });
+        $('.click-img').bind('click', function(e) {
+            e.preventDefault();
+            $('.img-show').attr('src',$(this).attr('src').replace('images','images/normal'));
+            $('.img-box-show').fadeIn();
+        });
+       
+    </script>
+</html>
