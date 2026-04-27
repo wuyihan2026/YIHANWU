@@ -364,7 +364,7 @@ html,body{
     line-height: 1.3vw;
     position: relative;
     width: 100%;
-    height: 10vw;
+    height: 50vw;
     padding-left: 32%;
     padding-right: 4vw;
 }
@@ -374,7 +374,8 @@ html,body{
     padding: 1.3vw;
     box-sizing: border-box;
 }
-.notyet .img-box{
+.notyet .img-box,
+.compensatorynomad .img-box{
     width: 100%;
     float: left;
     padding: 1.3vw;
@@ -386,7 +387,8 @@ html,body{
     float: left;
     box-sizing: border-box;
 }
-.notyet .img-box .img-box-line{
+.notyet .img-box .img-box-line,
+.compensatorynomad .img-box .img-box-line{
     width: 100%;
     margin-top: 1vw;
 }
@@ -398,7 +400,8 @@ html,body{
     box-sizing: border-box;
     margin-top: 0.4vw;
 }
-.notyet .img-box .img-box-line img{
+.notyet .img-box .img-box-line img,
+.compensatorynomad .img-box .img-box-line img{
     width: 31%;
     height: 20vw;
     object-fit: contain;
@@ -413,31 +416,36 @@ html,body{
     float: left;
     margin: 0 0.2vw;
 }
-.notyet .img-box .img-box-line img:first-child{
+.notyet .img-box .img-box-line img:first-child,
+.compensatorynomad .img-box .img-box-line img:first-child{
     margin-left: 0px;
 }
-.notyet .img-box .img-box-line img:last-child{
+.notyet .img-box .img-box-line img:last-child,
+.compensatorynomad .img-box .img-box-line img:last-child{
     margin-right: 0px;
 }
 .unoccupied .img-box img{
     height: 12vw;
     margin-top: 0.5vw;
 }
-.notyet .img-box img{
+.notyet .img-box img,
+.compensatorynomad .img-box img{
     margin-top: 0.5vw;
 }
 .unoccupied .img-box-show,
 .notyet .img-box-show,
+.compensatorynomad .img-box-show,
 .press .img-box-show,
 .selfhealing .img-box-show
 {
     position: fixed;
     left: 0;top: 0;
     width: 100%;height: 100%;
-    background-color: #000;
+    background-color: #000;    z-index: 999999;
 }
 .unoccupied .img-box-show .img-show-box,
 .notyet .img-box-show .img-show-box,
+.compensatorynomad .img-box-show .img-show-box,
 .press .img-box-show .img-show-box,
 .selfhealing .img-box-show .img-show-box
 {
@@ -447,11 +455,12 @@ html,body{
     text-align: center;
 }
 .unoccupied .img-box-show .img-img,
-.notyet .img-box-show .img-img
+.notyet .img-box-show .img-img,
+.compensatorynomad .img-box-show .img-img
 {
     position: relative;
     max-width: 100%;
-    height: 100%;
+/*    height: 100%; */
     display: block;
     border: 1px solid #fff;
     margin-top: 3vw;
@@ -467,15 +476,18 @@ html,body{
 }
 .unoccupied .img-box-show .img-show,
 .notyet .img-box-show .img-show,
+.compensatorynomad .img-box-show .img-show,
 .press .img-box-show .img-show,
 .selfhealing .img-box-show .img-show
 {
     position: relative;
     max-width: 100%;
     max-height: 100%;
+    max-height: 90vh;
 }
 .unoccupied .img-box-show .img-img:before,
 .notyet .img-box-show .img-img:before,
+.compensatorynomad .img-box-show .img-img:before,
 .press .img-box-show .img-img:before,
 .selfhealing .img-box-show .img-img:before
 {
@@ -493,6 +505,7 @@ html,body{
 }
 .unoccupied .img-box-show .close-btn,
 .notyet .img-box-show .close-btn,
+.compensatorynomad .img-box-show .close-btn,
 .press .img-box-show .close-btn,
 .selfhealing .img-box-show .close-btn
 {
@@ -507,6 +520,7 @@ html,body{
 }
 .unoccupied .img-box-show .close-btn::after,
 .notyet .img-box-show .close-btn::after,
+.compensatorynomad .img-box-show .close-btn::after,
 .press .img-box-show .close-btn::after,
 .selfhealing .img-box-show .close-btn::after
 {
@@ -521,6 +535,7 @@ html,body{
 }
 .unoccupied .img-box-show .close-btn::before,
 .notyet .img-box-show .close-btn::before,
+.compensatorynomad .img-box-show .close-btn::before,
 .press .img-box-show .close-btn::before,
 .selfhealing .img-box-show .close-btn::before
 {
